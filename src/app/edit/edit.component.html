@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <section>
+    <h3>Use the Form below to update your profile</h3>
+    <label for="name"
+      >Name <input name="name" type="text" [(ngModel)]="profile.name"
+    /></label>
+
+    <label for="contact"
+      >Contact <input name="contact" type="text" [(ngModel)]="profile.contact"
+    /></label>
+
+    <label for="bio"
+      >Bio
+      <textarea
+        name="bio"
+        id="bio"
+        cols="30"
+        rows="10"
+        [(ngModel)]="profile.bio"
+      ></textarea
+    ></label>
+    <button routerLink="/profile">Update</button>
+  </section>
+</form>
